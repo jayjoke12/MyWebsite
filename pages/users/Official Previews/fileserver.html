@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Generate an automatic redirect to "http://tingler.farted.net::9212"
+        after 3 seconds. -->
+<meta http-equiv="refresh" content="3; url=http://tingler.farted.net:9212">
+<!-- Display a message to the user while they wait. -->
+<head>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .spinner {
+            width: 50px;
+            height: 50px;
+            border: 4px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s linear infinite;
+            margin-bottom: 20px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        p {
+            color: white;
+            font-size: 18px;
+        }
+        
+        a {
+            color: #fff;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="spinner"></div>
+    <p>Redirecting to the file server...</p>
+    <p>If you are not redirected automatically, click <a href="http://tingler.farted.net:9212">here</a>.</p>
+</body>
